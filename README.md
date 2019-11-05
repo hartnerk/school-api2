@@ -23,7 +23,7 @@ Add the abilitiy to CRUD Courses. A course can have many students and a student 
 
 You must be able to: 
 
-- Create, Read, Update, and Destroy a course 
+- Create, Read, Update, and Destory a course 
 - Enroll a student in a course 
 - Remove a student from a course
 - See all the students currently enrolled in a course 
