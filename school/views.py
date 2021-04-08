@@ -26,8 +26,8 @@ def new_student(request):
         form = StudentForm(data)
         if form.is_valid():
             student_form = form.save(commit=False)
-            serialized_student = StudentSerializer(student_form).student_detail
             form.save()
+            serialized_student = StudentSerializer(student_form).student_detail
             return JsonResponse(data=serialized_student, status=200)
 
 @csrf_exempt
@@ -38,8 +38,8 @@ def edit_student(request, student_id):
         form = StudentForm(data, instance=student)
         if form.is_valid():
             student_form = form.save(commit=False)
-            serialized_student = StudentSerializer(student_form).student_detail
             form.save()
+            serialized_student = StudentSerializer(student_form).student_detail
             return JsonResponse(data=serialized_student, status=200)
 
 @csrf_exempt
@@ -68,8 +68,8 @@ def new_course(request):
         form = CourseForm(data)
         if form.is_valid():
             course_form = form.save(commit=False)
-            serialized_course = CourseSerializer(course_form).course_detail
             form.save()
+            serialized_course = CourseSerializer(course_form).course_detail
             return JsonResponse(data=serialized_course, status=200)
 
 @csrf_exempt
@@ -80,8 +80,8 @@ def edit_course(request, course_id):
         form = CourseForm(data, instance=course)
         if form.is_valid():
             course_form = form.save(commit=False)
-            serialized_course = CourseSerializer(course_form).course_detail
             form.save()
+            serialized_course = CourseSerializer(course_form).course_detail
             return JsonResponse(data=serialized_course, status=200)
 
 @csrf_exempt

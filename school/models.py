@@ -9,6 +9,7 @@ class Students(models.Model):
     def __str__(self):
         return f'{self.student_name}'
 
+        
 class Courses(models.Model):
     course_name = models.CharField(max_length=255, default='')
     course_description = models.CharField(max_length=1024, default='')
@@ -16,3 +17,5 @@ class Courses(models.Model):
 
     def __str__(self):
         return f'{self.course_name} : {self.course_description}'
+
+        
